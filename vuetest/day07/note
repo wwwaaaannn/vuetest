@@ -1,0 +1,35 @@
+vuex 
+
+webpack less/sass
+
+vue element admin
+
+
+axios
+    单一ajax库 jq 做前后台交互
+    轻量级，比较适合mvvm开发模式
+    默认请求数据类型    json 查询字符串 qs jq
+    
+拦截器
+    axios.interceptors.response.use(
+        function(e){
+
+        }
+    )
+    axios.interceptors.request.use(
+        function(config){
+            if(config.method == 'post'){
+
+            }
+        }
+    )
+
+
+
+vuex    
+    状态管理机
+    公共的平台，所有组件都可以使用vuex中的data
+    
+    小型项目 不使用vuex
+    中大型项目 使用vuex
+    

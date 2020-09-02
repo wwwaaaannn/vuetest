@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+    <style>
+        .outer{
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="app"> 
+        <div class="outer" @click='toClick("hello",$event)'>
+  <!--           <div class="inner" @click.stop='toInnerClick($event)'></div>
+  -->           <div class="inner" @click.stop.once='toInnerClick($event)'></div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:".app",
+            data:{
+
+            },
+            methods: {
+                toClick(msg,event){
+                    console.log('outer')
+                },
+
+                toInnerClick(event){
+                    /* event.stopPropagation(); */
+                    console.log('inner')
+                }
+
+            },
+        })
+    </script>
+</body>
+</html>

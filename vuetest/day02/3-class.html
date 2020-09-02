@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+    <style>
+        .one{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .text{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div :class="obj">lkakdlasj
+
+        </div>
+    </div>
+    <script class="app">
+        new Vue({
+            el:'.app',
+            data:{
+                isTrue:true,
+                hastext:true,
+                obj:{
+                    one:true,
+                    text:true
+                }
+            }
+        })
+    </script>
+</body>
+</html>
