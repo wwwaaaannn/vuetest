@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+<style>
+    
+</style>
+</head>
+<body>
+    <div id="app">
+        <birup-wyq :wyq='aaa' :zc='hello' :kaj='nima'></birup-wyq>
+    </div>
+    <script>
+        //注册全局组件
+        //birup-wyq组件名
+        Vue.component('birup-wyq',{
+            //template组件的内容
+            template:`
+                <div @click='test' :style='style'>
+                {{wyq}}
+                {{zc}}
+                {{kaj}}
+                </div>
+            `,
+            //在组件中data必须是一个函数
+            //返回值为一个对象
+                data(){
+                    return{
+                        msg:'hello',
+                        style:{
+                            width:'200px',
+                            height:'30px',
+                            color:'pink',
+                            backgroundColor:'red',
+                        }
+                    }
+                },
+                //子组件使用props去承接父组件的传值
+                props:['wyq','zc','kaj'],
+                methods: {
+                    test(){
+                        alert('111')
+                    }
+                },
+        })
+
+        //
+        new Vue({
+            el:'#app',
+            //对象
+            data:{
+                hello:'zcssb',
+                aaa:'父组件传值',
+                nima:'前端真好❄雪'
+            }
+        })
+    </script>
+</body>
+</html>

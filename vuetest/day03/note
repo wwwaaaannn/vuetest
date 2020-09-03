@@ -87,4 +87,34 @@ Destroy
 </form>
 
 
+计算属性
 
+    computed
+        一般指的是对data中原有的数据进行计算后返回结果,可以当作属性来使用
+        只有当计算属性依赖发生改变,那么计算属性才会重新执行
+
+监听属性
+        input  change事件
+            data:{
+                msg:'',
+                form:{}
+            }
+        监听,如果msg的值发生改变,那么触发监听
+        watch:{
+            msg:function(new,old){
+
+            },
+            form:{
+                handler:function(new,old){
+
+                },
+                深度监听
+                deep:true
+            }
+     }
+
+组件
+    先了解
+    组件库
+    按钮    复用
+    
